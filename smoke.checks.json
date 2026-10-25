@@ -1,0 +1,17 @@
+[
+  { "name": "Health endpoint", "method": "GET", "path": "/health", "expectStatus": 200 },
+  {
+    "name": "Authorize a card payment",
+    "method": "POST",
+    "path": "/payments/authorize",
+    "body": { "amount": 42.5, "currency": "USD", "cardLast4": "4242" },
+    "expectStatus": 200
+  },
+  {
+    "name": "Negative amount is rejected",
+    "method": "POST",
+    "path": "/payments/authorize",
+    "body": { "amount": -1, "currency": "USD", "cardLast4": "4242" },
+    "expectStatus": 400
+  }
+]

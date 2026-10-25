@@ -1,0 +1,14 @@
+{
+  "name": "dockside-payments-service",
+  "version": "4.1.2",
+  "private": true,
+  "description": "Authorizes card payments for Dockside Market orders",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test",
+    "smoke": "node scripts/smoke.js http://localhost:8080"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
